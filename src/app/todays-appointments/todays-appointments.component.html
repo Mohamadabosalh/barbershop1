@@ -1,0 +1,22 @@
+<div class="navigation">
+    <nav>
+      <div class="home-date">
+        {{ myDate | date: 'short' }}
+      </div>
+        <button routerLink="/app-home-page">Home Page</button>
+        <button routerLink="/app-all-appointment">All Appointments</button>
+        <app-logout></app-logout>
+    </nav>
+  </div>
+  <div class="appointments-list">
+    <h2>Today's Appointments</h2>
+    <ul *ngIf="todaysAppointments.length > 0; else noAppointments">
+      <li *ngFor="let appointment of todaysAppointments">
+        {{ appointment.name }} - {{ appointment.date }}- {{ appointment.time }}- {{ appointment.haircutTypes }}
+        <button type="submit" class="btn-done" (click)="deleteAppointment(appointment.id)">Done</button>
+      </li>
+    </ul>
+    <ng-template #noAppointments>
+      <p>No appointments for today.</p>
+    </ng-template>
+  </div>

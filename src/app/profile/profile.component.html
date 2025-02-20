@@ -1,0 +1,54 @@
+<div class="navigation">
+  <nav>
+      <button routerLink="/app-home-page">Home Page</button>
+      <button routerLink="/app-all-appointment">All Appointments</button>
+      <button routerLink="/app-todays-appointments">Todays Appointments</button>
+      <app-logout></app-logout>
+  </nav>
+</div>
+<div class="profile-img">
+  <img src="assets/images-signin4.jpeg" alt="">
+</div>
+<div class="profile-btn">
+<button class="btn" type="button" (click)="toggleForm('openingHours')">UPDATE OPENING HOURS</button>
+<button class="btn" type="button" (click)="toggleForm('haircutPrices')">UPDATE HAIRCUT TYPE PRICE</button>
+<button class="btn" type="button" (click)="toggleForm('haircutTypes')">UPDATE HAIRCUT TYPE</button>
+</div>
+<div class="container">
+<div *ngIf="showForm === 'openingHours'">
+  <form (ngSubmit)="saveOpeningHours()">
+    <h3>Update Opening Hours</h3>
+    <table>
+      <tr *ngFor="let day of weekDays">
+        <td>{{ day }}:</td>
+        <td><input type="text" [(ngModel)]="openingHours[day]" [name]="'openingHour_' + day"></td>
+      </tr>
+    </table>
+    <button type="submit">Save</button>
+  </form>
+</div>
+<div *ngIf="showForm === 'haircutPrices'">
+  <form (ngSubmit)="saveHaircutPrices()">
+    <h3>Update Haircut Type Prices</h3>
+    <table>
+      <tr *ngFor="let cut of haircutPrices">
+        <td>{{ cut.type }}:</td>
+        <td><input type="number" [(ngModel)]="cut.price" [name]="'price_' + cut.type"></td>
+      </tr>
+    </table>
+    <button type="submit">Save</button>
+  </form>
+</div>
+<div *ngIf="showForm === 'haircutTypes'" class="haircut-container">
+  <h3>Manage Haircut Types</h3>
+  <div class="add-new">
+    <input type="text" [(ngModel)]="newHaircutType" name="newHaircut" placeholder="Enter new haircut type">
+    <button type="button" (click)="addNewHaircutType()">Add</button>
+  </div>
+  <ul class="haircut-list">
+    <li *ngFor="let cut of haircutPrices" class="haircut-item">
+      <span>{{ cut.type }}</span>
+      <button class="delete-btn" (click)="deleteHaircutPrice(cut.id)">🗑 Delete</button>
+    </li>
+</ul>
+</div>

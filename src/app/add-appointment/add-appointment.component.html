@@ -1,0 +1,45 @@
+<div class="navigation">
+  <nav>
+    <div class="home-date">
+      {{ myDate | date: 'short' }}
+    </div>
+      <button routerLink="/app-home-page">Home Page</button>
+      <button routerLink="/app-all-appointment">All Appointments</button>
+      <button routerLink="/app-todays-appointments">Todays Appointments</button>
+      <app-logout></app-logout>
+  </nav>
+</div>
+<div class="container">
+  <video autoplay loop muted class="background-video">
+    <source src="assets/hourbackground.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <div>
+      <form (ngSubmit)="addAppointment()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" [(ngModel)]="newAppointment.name" id="name" name="name" class="form-control" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" [(ngModel)]="newAppointment.date" id="date" name="date" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Time:</label>
+          <input type="time" [(ngModel)]="newAppointment.time" id="time" name="time" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="haircutType">Haircut Type:</label>
+          <select [(ngModel)]="newAppointment.haircutTypes" id="haircutType" name="haircutType" class="form-control" required>
+            <option *ngFor="let haircut of haircutPrices" [value]="haircut.type">
+              {{ haircut.type }} - ${{ haircut.price }}
+            </option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Appointment</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="background-container">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="assets/barbershop.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="dashboard-body">
+    <h1>SAIYAN'S Studio</h1>
+    <p>{{ title | titlecase }}</p>
+    <div class="dashboard-btn">
+      <button type="button" routerLink="/app-signin">Sign In</button>
+      <button type="button" routerLink="/app-signup">Sign Up</button>
+      <button type="button" routerLink="/app-about-us">About Us</button>
+    </div>
+  </div>
+<!-- json-server --watch src/db.json --port 3000alhost:3000/users -->

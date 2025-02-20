@@ -1,0 +1,122 @@
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dashboard-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  margin-left: 55vw;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.form-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+.form-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: #62d118;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #62d118; 
+  border-color: #62d118;
+}
+
+.a-forget, a {
+  color: #62d118;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.a-forget:hover, a:hover {
+  color: #62d118; 
+  text-decoration: underline;
+}
+
+.dashboard-back {
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard-back:hover {
+  background-color: #62d118;
+  border-color: #1dda65;
+}

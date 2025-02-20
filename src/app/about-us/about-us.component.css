@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.about-header {
+  text-align: center;
+  background-color: #1f1f1f;
+  color: #FFD700;
+  padding: 50px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 5px solid #FFD700;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.about-header p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.about-header .about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.about-content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+  text-transform: uppercase;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.dashboard-btn {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.dashboard-btn button {
+  margin: 10px;
+  padding: 12px 20px;
+  background-color: #FFD700;
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-btn button:hover {
+  background-color: #e6a700;
+  transform: scale(1.1);
+}
+
+.dashboard-btn button:focus {
+  outline: none;
+}
