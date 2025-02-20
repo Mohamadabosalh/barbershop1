@@ -1,0 +1,95 @@
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #1f1f1f;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.navigation nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 30px;
+  border: none;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #FFD700;
+  transform: scale(1.1);
+  color: #121212;
+}
+
+button:focus {
+  outline: none;
+  border: 2px solid #FFD700;
+}
+
+.home-date {
+  margin-bottom: 25px;
+  font-size: 25px;
+  color: #FFD700;
+}
+
+.appointments-list {
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.appointments-list h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li span {
+  font-size: 16px;
+  color: #333;
+}
+
+button.btn-done {
+  background-color: #FFD700;
+  color: #121212;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-done:hover {
+  background-color: #e6a700;
+}

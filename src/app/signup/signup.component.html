@@ -1,0 +1,61 @@
+<div class="dashboard-body">
+<button class="btn" type="button" routerLink="/app-dashboard">Back To Dashboard</button>
+<div class="background-container">
+  <img src="assets/loginphoto.png" alt="User Image" class="background-image">
+</div>
+<form [formGroup]="newUser" (ngSubmit)="SignUp()">
+  <div class="form-group">
+    <h1 id="si">Sign Up Panel</h1>
+    <label>
+      Username:
+      <input type="text" id="username" formControlName="username" class="form-control" placeholder="Username">
+    </label>
+    <div *ngIf="newUser.get('username')?.invalid && newUser.get('username')?.touched" class="error">
+      <small *ngIf="newUser.get('username')?.errors?.['required']">Username is required.</small>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>
+      Email:
+      <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email">
+      <div *ngIf="newUser.get('email')?.invalid && newUser.get('email')?.touched" class="error">
+        <small *ngIf="newUser.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="newUser.get('email')?.errors?.['email']">Invalid email address.</small>
+      </div>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Password:
+      <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password">
+      <div *ngIf="newUser.get('password')?.invalid && newUser.get('password')?.touched" class="error">
+        <small *ngIf="newUser.get('password')?.errors?.['required']">Password is required.</small>
+        <small *ngIf="newUser.get('password')?.errors?.['minlength']">Password must be at least 8 characters long.</small>
+        <small *ngIf="newUser.get('password')?.errors?.['pattern']">must be one capital one small and symbol</small>
+      </div>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Confirm Password:
+      <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Confirm Password">
+      <div *ngIf="newUser.get('confirmPassword')?.invalid && newUser.get('confirmPassword')?.touched" class="error">
+        <small *ngIf="newUser.get('confirmPassword')?.errors?.['required']">Confirm Password is required.</small>
+        <small *ngIf="newUser.get('confirmPassword')?.errors?.['mismatch']">Passwords do not match.</small>
+      </div>
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Phone:
+      <input type="tel" id="phone" formControlName="phone" class="form-control" placeholder="Phone">
+      <div *ngIf="newUser.get('phone')?.invalid && newUser.get('phone')?.touched" class="error">
+        <small *ngIf="newUser.get('phone')?.errors?.['required']">Phone number is required.</small>
+        <small *ngIf="newUser.get('phone')?.errors?.['pattern']">Phone number must start with 05 and contain exactly 10 digits.</small>
+      </div>
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="newUser.invalid">Add User</button>
+  <button type="button" class="btn btn-secondary" routerLink="/app-signin">Already registered? Click to login!!</button>
+</form>
+</div>

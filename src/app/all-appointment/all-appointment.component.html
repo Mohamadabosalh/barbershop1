@@ -1,0 +1,18 @@
+<div class="navigation">
+    <nav>
+      <div class="home-date">
+        {{ myDate | date: 'short' }}
+      </div>
+        <button routerLink="/app-home-page">Home Page</button>
+        <button routerLink="/app-todays-appointments">Todays Appointments</button>
+        <app-logout></app-logout>
+    </nav>
+  </div>
+<div class="appointments-list">
+  <h2>Appointments List</h2>
+  <ul>
+    <li *ngFor="let appointment of appointments">
+      {{ appointment.name }} - {{ appointment.date }}- {{ appointment.time }}- {{ appointment.haircutTypes }}
+      <button type="submit" class="btn-done" (click)="deleteAppointment(appointment.id)">Done</button>    </li>
+  </ul>
+</div>

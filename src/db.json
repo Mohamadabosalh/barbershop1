@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": "cca0",
+      "username": "anan",
+      "password": "Anan@123456",
+      "email": "anan@a.com",
+      "phone": "0502302132"
+    },
+    {
+      "id": "ca14",
+      "username": "mohamad",
+      "password": "mM@123456789",
+      "email": "mohamadabosalh7@gmail.com",
+      "phone": "0526017134"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "10dc",
+      "name": " anan",
+      "time": "21:15",
+      "date": "2025-02-03",
+      "haircutTypes": "CAESAR"
+    }
+  ],
+  "openingHours": {
+    "Sunday": "9:00 AM - 19:00 PM",
+    "Monday": "close",
+    "Tuesday": "9:00 AM - 19:00 PM",
+    "Wednesday": "9:00 AM - 19:00 PM",
+    "Thursday": "9:00 AM - 19:00 PM",
+    "Friday": "9:00 AM - 15:00 PM",
+    "Saturday": "19:00 AM - 22:00 PM"
+  },
+  "haircutTypes": [
+    {
+      "type": "CAESAR",
+      "id": "bab8"
+    },
+    {
+      "type": "SCINFADE",
+      "id": "0ec4"
+    },
+    {
+      "type": "UNDERCUT",
+      "id": "4fe8"
+    },
+    {
+      "type": "JUICEBOX",
+      "id": "50d9"
+    },
+    {
+      "type": "SPIKES",
+      "id": "96a1"
+    }
+  ],
+  "haircutPrices": [
+    {
+      "id": "ea6b",
+      "type": "CAESAR",
+      "price": 25
+    },
+    {
+      "id": "95c6",
+      "type": "SCINFADE",
+      "price": 25
+    },
+    {
+      "id": "1226",
+      "type": "UNDERCUT",
+      "price": 30
+    },
+    {
+      "id": "4ee8",
+      "type": "JUICEBOX",
+      "price": 35
+    },
+    {
+      "id": "c38d",
+      "type": "SPIKES",
+      "price": 40
+    }
+  ]
+}

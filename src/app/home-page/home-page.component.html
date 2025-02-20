@@ -1,0 +1,50 @@
+<div class="home-container">
+  <div class="navigation">
+    <nav>
+        <div class="home-date">
+    {{ myDate | date: 'short' }}
+  </div>
+      <button routerLink="/app-home-page">Home Page</button>
+      <button routerLink="/app-add-appointment">Add Appointment</button>
+      <button routerLink="/app-all-appointment">All Appointments</button>
+      <button routerLink="/app-todays-appointments">Today's Appointments</button>
+      <button routerLink="/app-profile">Profile</button>
+      <app-logout></app-logout>
+    </nav>
+  </div>
+  <div class="home-video">
+    <video class="home-video" autoplay muted loop>
+      <source src="assets/open.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="home-body">
+    <h1>SAIYAN'S Barber</h1>
+    <div class="home-hours">
+      <h2>Opening Hours</h2>
+      <table>
+        <tr *ngFor="let day of weekDays">
+          <td>{{ day }}:</td>
+          <td>{{ openingHours[day] }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="home-cut">
+      <div class="home-cut">
+   
+        <div class="home-gallery">
+          <img src="assets/haircut1.png" alt="Haircut Style 1">
+          <img src="assets/haircut2.png" alt="Haircut Style 2">
+          <img src="assets/haircut3.png" alt="Haircut Style 3">
+        </div>
+
+      <h2>Haircut Types & Prices</h2>
+<table>
+  <tr *ngFor="let cut of haircutPrices">
+    <td>{{ cut.type }}:</td>
+    <td>{{ cut.price | currency }}</td>
+  </tr>
+</table>
+    </div>
+  </div>
+</div>
